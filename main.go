@@ -17,6 +17,7 @@ func GetEnvWithKey(key string) string {
 }
 
 func LoadEnv() {
+	fmt.Print("Loading keys...\n")
 	err := godotenv.Load(".env")
 	if err != nil {
 		log.Fatalf("Error loading .env file")
@@ -62,15 +63,15 @@ func main() {
 
 	//Check, the Regions as Arg
 
-	if len(os.Args) != 4 {
+	if len(os.Args) != 2 {
 		exitErrorf("Bucket Region required\nUsage: %s bucket_region",
 			os.Args[0])
 	}
 	b_region := os.Args[1]
 
-	CustomBucketName := os.Args[2]
+	// CustomBucketName := os.Args[2]
 
-	fmt.Printf(CustomBucketName)
+	// fmt.Printf(CustomBucketName)
 
 	// Initialize a session, that the SDK will use to load
 	// credentials from the shared credentials file ./.env.
