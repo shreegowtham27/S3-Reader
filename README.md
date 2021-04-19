@@ -1,4 +1,4 @@
-#S3 Reader
+# S3 Reader
 
 This is a small Command Line Utility to **Retrive all your files** from `S3 Storage Bucket` using the Region.
 
